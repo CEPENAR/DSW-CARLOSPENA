@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+</head>
+
+<body style="font-family: Verdana,sans-serif; background-color:rgb(111, 112, 192);font-size: 1.1em" jstcache="0">
+    <div id="menuContenedor">
+    
+        <a href="javascript: irAnterior()"><img src="../Fase2/imagenes/flecha_re_m.gif" alt="Atrás" width="100" height="37" title="Página anterior"></a>
+        <a href="javascript: irHome()"><img src="../Fase2/imagenes/flecha_home_resp.gif" alt="índice" width="100" height="37" title="Página índice"></a>
+        <a href="javascript: irSiguiente()"><img src="../Fase2/imagenes/flecha_av_resp.gif" alt="Adelante" width="100" height="37" title="Página siguiente"></a>
+        <a href="../index.html"><img src="../Fase2/imagenes/flecha_inicio_resp.gif" alt="Inicio" width="100" height="37" title="Página Inicio"></a>
+        
+        <a href="informacion.htm"><img src="../Fase2/imagenes/flecha_ayuda_resp.gif" alt="Ayuda" width="100" height="37" title="Página ayuda"></a>
+        </div>
+        </div>
+    <Header class="entry-header">
+        <h1 class="entry-header"> Aprendiendo utilización de etiquetas semánticas y CSS Grid </h1>
+        <br>
+        <br>
+    <section><h3>Próposito del sitio:</h3> 
+        
+        <p> En este sitio web encontraras informanción muy importante para tu preparación profesional, la cual consiste en explicar muy detalladamente sobre la utilización de etiquetas semánticas y CSS Grid en los proyectos de sitios web.
+        </p>
+        
+    </section>
+    <br>
+    </Header>
+    <nav>
+        <ul>
+            <h3>
+            <li> Inicio </li>
+            </h3>
+            <h3>
+            <li> Temas 
+            </h3>
+                <ul>
+                    <li> Tema 1: Etiquetas Semánticas </li>
+                    <li>Tema 2</li>
+                </ul>
+            </li>
+            <h3>
+            <li> Recursos Digitales
+            </h3>
+                <ul>
+                    <li>Recurso 1</li>
+                    <li>Recurso 2</li>
+                </ul>
+            </li>
+            <h3>
+            <li> Aprendizaje
+            </h3>
+                <ul>
+                    <li>Actividad 1</li>
+                    <li>Actividad 2</li>
+                </ul>
+            </li>
+            <h3>
+            <li> Acerca de </li>
+            </h3>
+        
+        </ul>
+    </nav>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <section>
+
+        <header><h3>ETIQUETAS SEMÁNTICAS:</h3></header>
+
+    <article>
+        
+
+    <p>
+
+        En este artículo vamos a ver las etiquetas semánticas de HTML5, como: <strong> HEADER, ARTICLE, SECTION, ASIDE, FOOTER, NAV, FIGURE, TIME </strong>
+    <p>
+        Según Diez, T., Domínguez, M. J., Martínez, J. J., & Sáenz, J. (2012). Lo primero que conviene remarcar es que HTML5 no es un lenguaje nuevo en contraposición a HTML, sino una nueva versión del mismo lenguaje. También hay que recordar que HTML5 incorpora cambios en profundidad que los navegadores antiguos no son capaces de mostrar, por lo tanto que hay que tener actualizado el navegador.
+    </p>
+    <p>
+        Las etiquetas semánticas ayudan a definir la estructura del documento y permiten que las páginas web sean mejor indexadas por los buscadores.
+    </p>
+        
+    <p>
+        Una etiqueta se califica como semántica si tiene que ver el significado, es decir, si nos informa sobre lo que trata su contenido. Por ejemplo, la etiqueta SECTION nos dice que contiene una sección o capítulo dentro de la página. Frente a las etiquetas semánticas tenemos otros tipos de etiquetas como las que afectan al formato, como UL, a multimedia, como VIDEO, etc.
+    </p> 
+    <p> El esquema de una página con etiquetas semánticas podría ser el siguiente. 
+    <br>
+    <br>
+        <img src="../Fase2/imagenes/estructura-html5.jpg" alt="Ayuda" width="700" height="340" title="Imagen ejemplo">
+
+    </p> 
+
+    <p> Antes de la existencia de las etiquetas semánticas, el contenido se estructuraba con etiquetas DIV que no aportaban ninguna información sobre el tema que trataban, salvo que se añadiese aprovechando el valor dado a la propiedad ID, o a la propiedad CLASS para hacer referencia a su contenido.
+    </p>
+    <p> Las etiquetas a las que vamos a prestar más atención en este artículo son las que definen la estructura general del sitio ( HEADER, ARTICLE, SECTION, ASIDE, FOOTER, NAV ) aunque también existen otra nuevas etiquetas semánticas que señalan elementos concretos de la página como la etiqueta FIGURE, para imágenes y gráficos, la etiqueta FIGCAPTION, que es un pie de imagen, la etiqueta TIME para definir fechas y horas, también MAIN, MARK, SUMARY Y DETAILS.
+
+    </p>
+    <p>Por ejemplo, el código siguiente produce el resultado que se ve a continuación utilizando las etiquetas FIGURE y FIGCAPTION.
+
+    <blockquote>
+        <!-- "<figure>"
+            <br>
+            "<img src="imagenes/fallas" alt="The Pulpit Rock" width="499" height="340">"
+            <br>
+            "<figcaption>Fig.1 - Falla de la plaza del Ayuntamiento de Valencia </figcaption>"
+            <br>
+            "
+        </figure>" -->
+    </blockquote>
+
+    <br>
+    <br>
+        <figure>
+            <img src="../Fase2/imagenes/fallas.jpg" alt="The Pulpit Rock" width="499" height="340">
+            <figcaption>Fig.1 - Falla de la plaza del Ayuntamiento de Valencia.</figcaption>
+        </figure>
+
+    </p>
+
+       
+            
+    </article>
+</section>
+
+<section>
+
+    <header><h3>CCS GRID:</h3></header>
+
+<ARTicle>
+
+<P>
+CSS Grid es un sistema de maquetación web que divide la página en una cuadrícula o rejilla (grid) a partir de la cual se pueden posicionar los diferentes elementos de manera más sencilla, versátil y coherente.
+</P>
+
+<P>
+<STRong> Su practicidad y sus múltiples ventajas lo han convertido en un estándar.</STRong> Es decir, casi cualquier navegador soporta e interpreta este tipo de código.
+</P>
+
+<P>
+La irrupción de CSS Grid, junto con Flexbox, supuso una revolución en el mundo de la programación web, ya que permitía realizar con mucho menos código elementos y estructuras que resultaban muy complejas o directamente imposibles.
+</P>
+
+<P>
+<h4> Ventajas de CSS Grid:</h4>
+</P>
+
+<li>
+<strong> Mucha más flexibilidad:</strong> te permite controlar los elementos en las 2 dimensiones y con total libertad.
+</li>
+<li>
+    <strong> Menos código y menos bugs:</strong> se reduce considerablemente el código empleado, lo que conlleva revisiones más sencillas y menor probabilidad de bugs.
+</li>
+
+<li>
+    <strong>Optimización de recursos: </strong>al ser código más simple y consistente se economiza tanto en tiempo como en recursos necesarios para mostrar la página.
+
+</li>
+
+<li>
+
+   <strong> Responsive más sencillo:</strong> permite crear elementos dinámicos que se adaptan a diferentes tamaños o resoluciones sin complicaciones.
+</li>
+
+<p>
+<h4> Primeros pasos </h4>
+</p>
+<p>Te resumimos el funcionamiento de CSS Grid en 4 sencillos pasos.
+</p>
+<p>
+<h4>1. Crea un bloque contenedor</h4>
+</p>
+<p>
+    Para alojar los elementos que quieras colocar es necesario crear un bloque contenedor, como por ejemplo:
+</p>
+<img src="../Fase2/imagenes/crear bloque contenedor.png" alt="Crear bloque contenedor" width="700" height="340" title="Crear bloque contenedor">
+
+<p>
+<h4>2. Activa CSS Grid</h4>
+</p>
+
+<p>
+    Para que Grid comience a funcionar debes activarlo mediante la propiedad display: grid.
+</p>
+
+<img src="../Fase2/imagenes/Activa CSS Grid.png" alt="">
+
+<p>
+<h4>3. Define tu rejilla</h4>
+</p>
+
+<p>
+    Una vez esté activo, toca definir la rejilla mediante las siguientes propiedades: grid-template-rows, grid-template-columns y/o grid-template-areas.
+</p>
+
+<p>
+    Por ejemplo, si queremos hacer este esquema:
+</p>
+
+<img src="../Fase2/imagenes/Define tu rejilla.png" alt="">
+
+<p>
+    Utilizaremos el siguiente código:
+
+</p>
+
+<img src="../Fase2/imagenes/utilizaremos el siguiente codigo.png" alt="">
+
+<p>
+    Puedes definir tus elementos utilizando diferentes unidades fijas como los píxeles, o utilizar la unidad propia del sistema Grid: los fr.
+
+</p>
+
+<img src="../Fase2/imagenes/Definir elementos.png" alt="">
+
+<p>
+    Por ejemplo, si tienes 3 columnas y le asignas un valor 1fr a cada una, esto repartirá el espacio a partes iguales entre las 3. Si en cambio, le das el valor 2fr a una de ellas, esa ocupará el doble de espacio que las otras.
+</p>
+
+<p>
+    El espaciado entre items puedes marcarlo con grid-row-gap y grid-column-gap, o bien definirlo previamente en tu grid como si fueran una columna/fila más.
+</p>
+<p>
+<h4>4. Colocar los elementos en la rejilla</h4>
+</p>
+
+<img src="../Fase2/imagenes/Colocar elementos en la rejilla.png" alt="">
+
+<p>
+    Si quieres personalizar la ubicación de los ítems puedes indicarle donde quieres que vaya cada uno tal que así:
+</p>
+
+<img src="../Fase2/imagenes/Personalizar item.png" alt="">
+
+<p>
+    O de forma acortada:
+</p>
+
+<img src="../Fase2/imagenes/Forma acortada.png" alt="">
+
+<img src="../Fase2/imagenes/Forma acortada2.png" alt="">
+
+<p>
+    Otro modo acortado sería utilizando grid-row: X / Y o grid-column: X / Y. Siendo X el número de fila o columna inicial e Y el número de fila o columna final.
+</p>
+
+<img src="../Fase2/imagenes/Otro modo de acortar.png" alt="">
+
+<img src="../Fase2/imagenes/Otro modo de acortar2.png" alt="">
+
+<p>
+    De esta forma puedes repartir los elementos a tu gusto, incluso variando el espacio que ocupa cada uno para hacerlo más dinámico.
+</p>
+
+<p>
+    Esto es solo un avance de lo que puedes realizar con este sistema. Si quieres saber más, puedes pasarte por aquí y echarle un ojo a la guía.
+</p>
+
+<p>
+    <strong> Con CSS Grid ahorrarás tiempo picando código y tus diseños web serán más flexibles y funcionales.</strong> Si todavía no tienes hosting para montar tu página, pásate por nuestra web y obtén la mejor base para crear tus diseños. ¡A qué esperas para montar tu rejilla!
+
+
+</p>
+</ARTicle>
+
+<br>
+<br>
+<h4>
+    Referencias bibliográficas
+</h4>
+
+<p>
+    Diez, T., Domínguez, M. J., Martínez, J. J., & Sáenz, J. (2012). Creación de páginas Web accesibles con HTML5. Consultado el, 26.
+</p>
+
+<p>
+    https://www.aulaclic.es/articulos/html5-semantica_1.html#:~:text=Las%20etiquetas%20sem%C3%A1nticas%20ayudan%20a,lo%20que%20trata%20su%20contenido.
+</p>
+
+<p>
+    https://dinahosting.com/blog/css-grid-ventajas-y-primeros-pasos/
+</p>
+
+<p>
+    Celaya Luna, A. (2014). Creación de páginas web: HTML5. p. 1 - 60. https://elibro-net.bibliotecavirtual.unad.edu.co/es/ereader/unad/56045
+</p>
+
+<p>
+    Granollers i Saltiveri, T. G. (2012). Diseño de sistemas interactivos centrados en el usuario. Editorial UOC. p. 211 - 264. https://elibro-net.bibliotecavirtual.unad.edu.co/es/ereader/unad/56326?page=94
+</p>
+
+<p>
+    Ochoa Torres, J. (2018). O.V.I. SCV – Sistema Controlador de Versiones. [Video]. http://hdl.handle.net/10596/22592
+</p>
+</section>
+
+<br>
+<br>
+<h4>Mi Mockup</h4>
+<img src="../Fase2/imagenes/mockup.PNG" alt="Mokup" width="700" height="340" title="Mokup Carlos Peña Rojas">
+
+<br>
+<br>
+<footer>
+
+    <p>skype tutor: josue8atorres</p>
+    <p>E-mail tutor: josue.ochoa@unad.edu.co</p>
+</footer>
+</body>
+</html>
