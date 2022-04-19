@@ -4,6 +4,7 @@ header {
 }
 nav {
     background-color: rgb(22, 22, 59);
+    padding: 0%;
 }
 section{
     display: grid;
@@ -11,14 +12,16 @@ section{
 }
 article{
     background-color: rgb(111, 112, 192);
+    padding: 0%;
 }
+
 aside{
     background-color: azure;
     padding:0%;
 }
 footer {
     background-color: rgb(111, 112, 192);
-    font-family: Verdana,sans-serif;
+        font-family: Verdana,sans-serif;
     font-size: 1.1em" jstcache="0";
 }
 
