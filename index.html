@@ -5,23 +5,201 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../DSW-CARLOSPENA/fase3/estilos.css">  
 </head>
 <body>
-    <h1>Proyecto de sitio Web 2022 - 16-01.</h1>
-    <h3>Nombre del estudiante: Carlos Eduardo Peña Rojas</h3>
-    <h3>Programa: Ingeniería de Sistemas</h3>
+    
+    <nav>
+        <title>Menu Desplegable</title>
+		<style type="text/css">
+			
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:540px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:rgb(60, 61, 158);
+				color:#fff;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#434343;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-140px;
+				top:0px;
+			}
+			
+		</style>
+
+	</head>
+	<body>
+		<div id="header">
+			<ul class="nav">
+				<li><a href="../index.html">Inicio</a></li>
+				<li><a href="">Temas</a>
+					<ul>
+						<li><a href="fase3/tema1.html">Etiquetas Semánticas</a></li>
+						<li><a href="fase3/tema2.html">CCS Grid</a></li>
+						</li>
+					</ul>
+				</li>
+				<li><a href="">Recursos digitales</a>
+					<ul>
+						<li><a href="">Recurso 1</a></li>
+						<li><a href="">Recurso 2</a></li>
+					</ul>
+				</li>
+                <li><a href="">Aprendizaje</a>
+					<ul>
+						<li><a href="../DSW-CARLOSPENA/Fase2/design.html">Fase 2</a></li>
+						<li><a href="../DSW-CARLOSPENA/fase3/design.html">Fase 3</a></li>
+					</ul>
+				</li>
+				<li><a href="../DSW-CARLOSPENA/fase3/informacion.html">Acerca de</a></li>
+			</ul>
+		</div>
+</nav>
+
+<header>
+
+    <Header class="entry-header">
+        <h1><center> _______________________________________________________________ </center></h1>
+        <br>
+        <h1 class="entry-header"> <center>Proyecto de sitio Web 2022 - 16-01
+            <br>
+            <h6> Carlos Eduardo Peña Rojas
+            <br>
+            Estudiante de Ingeniería de Sistemas
+        </h6>
+        </center> </h1>
+        <h1><center> _______________________________________________________________ </center></h1>
+    </Header>
+
+    <section>
+        
+        <h2 style="background-color: cornflowerblue;">Próposito del sitio:</h2>
+        <h3 style="background-color: cornflowerblue;">En este sitio web encontraras informanción muy importante para tu preparación profesional, la cual consiste en explicar muy detalladamente sobre la utilización de etiquetas semánticas y CSS Grid en los proyectos de sitios web.
+        </h3>
+    </section>
+
+</header>
+
+<section> <h2> <center> Introducción al diseño web </center></h2>
+<br>
+<p>
+    El diseño es fundamental para el éxito de un sitio web. Se entiende por diseño la forma y el estilo de la página, es decir, no basta con crear una página mediante HTML y CSS, sino que la página debe resutar útil y atractiva para el usuario.
+
+    Entran dentro del diseño, aspectos tales como la maquetación, los colores, la distribución de elementos, el tamaño y forma de los mismos, y otros elementos del estilo y composición del sitio</h4>
+    
+</p>
+<br>
+<h3> Un buen diseño </h3>
+<br>
+
+<p>
+    El éxito de un sitio web no depende sólamente de que se muestren buenos contenidos, sino que gran parte del éxito se debe a un buen diseño. Una página con un buen diseño debe ser a la vez útil y atractiva, para ello debemos tener en cuenta no sólo la usabilidad o funcionalidad, sino también la estética. Al crear una página debemos pensar sobre todo en el punto de vista del usuario, es decir que a éste la página le resulte fácil de usar, y atractiva, no sólo por sus contenidos, sino también visualmente.
+
+En principio cabría pensar que un buen diseño es sólo cuestión de aplicar el buen gusto y el sentido común. Sin embargo esto puede no ser suficiente ya que en el diseño, existen una serie de normas y directrices que van más allá de gustos personales o de modas.
+</p> 
+<br>
+<h3>Limitaciones del diseño web</h3>
+<br>
+<p>
+    Como en cualquier otro tipo de diseño, el diseño web también tiene sus limitaciones. En cualquier tipo de diseño hay una serie de condicionantes que depenen del medio o material con el que diseñamos, así como el tipo de diseño.
+
+    En el diseño web dependemos de un medio, que es Internet, así como de unos lenguajes de programación: HTML, CSS, Javascript, PHP. Estos condicionantes hacen que el diseño web tenga una serie de características.
+</p>
+<br>
+<p>
+<li>
+    <strong> Descarga desde un servidor : </strong> Las páginas web deben descargarse desde un servidor web remoto, esto hace que el ancho de banda de la conexión del usuario sea un factor importante. Tendremos que tener en cuenta el tamaño o "peso" de la página (Kb que ocupa), para que ésta no tarde mucho en cargarse.
+</li>
+<br>
+<li>
+    <strong> Tamaño de las imágenes :</strong> El "peso" de la página depende del "peso" de la suma de todos sus componentes o archivos. Sin duda los archivos de mayor peso son las imágenes y archivos multimedia. No podemos prescindir de las imágenes en la pagina, pero sí que podemos reducir su peso sin disminuir por ello su calidad. Sobre este tema hablamos también en la página Imágenes en la web/Generalidades.
+</li>
+<br>
+<li>
+   <strong> Los Navegadores :</strong> Las páginas web son archivos que deben ser visualizados en unas aplicaciones llamadas navegadores. No todos los navegadores visualizan las páginas de la misma manera. A esto se añade que cada vez más usuarios se conectan a Internet a través de otros dispositivos que no son ordenadores (móviles, tablets, I-Phones, etc); Las páginas puede que no se visualicen de la misma manera en estos dispositivos.
+</li>
+<br>
+<li>
+<strong>Interactividad :</strong> Toda página tiene una serie de elementos interactivos que debemos tener en cuenta. Algunos de éstos suelen ser listas de enlaces, formularios, u otros elementos que pueden hacer la página más dinámica. La colocación de estos elementos debemos hacerlo de forma que estén integrados en la página.
+</li>
+<br>
+<li>
+    <strong>Otros elementos :</strong> Hay otra serie de elementos que debemos tener en cuenta en el diseño de páginas, entre ellos, la resolución de pantalla del usuario, el tipo de letra empleado, los colores y líneas dominantes, la distribución de los contenidos, etc.
+</li>
+<br>
+El diseño web tiene sus propias caracterísicas, a lo dicho anteriormente tenemos que tener en cuenta tanto el contenido de la página como la actitud de los usuarios de la Web.
+</p>
+<br>
+<h3>
+    Referencias bibliográficas
+</h3>
+<br>
+<p>
+    https://aprende-web.net/comple/diseno/diseno1.php
+</p>
+
+
+<br>
+<br>
+<center>
+<h4>Mi Mockup</h4>
+</center>
+<br>
+<center>
+<img src="../DSW-CARLOSPENA/fase3/imagenes/mockup.PNG" alt="Mokup" width="700" height="340" title="Mokup Carlos Peña Rojas">
+</center>
+<br>
+<br>
+
+
+
+</section>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h4>Fecha de creación: 20 de febrero de 2022</h4>
-    <p> <h4>Datos de contacto:</h4> <h5>Teléfono: 3183140786</h5></p>
+    <p> <strong> Fecha de creación: </strong>
+         20 de febrero de 2022</p>
+    <p> <strong> Datos de contacto </strong>
+        <p> <strong> Teléfono: </strong> 3183140786</p></p>
     <E-mail>cepenar@unadvirtual.edu.co</E-mail>
+<br>
 <br>
 <p>
     <a href="../DSW-CARLOSPENA/Fase2/design.html"> <h4>Ir a Fase 2 Diseño de Sitios Web</h4> </a>
