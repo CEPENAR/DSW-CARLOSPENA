@@ -5,7 +5,7 @@ header {
     
     text-align: justify;
     background-color: rgb(255, 255, 255);
-    padding: 2%;
+    padding: 4%;
 }
 nav {
     text-align: justify;
@@ -14,23 +14,20 @@ nav {
     float: left;
     width: 0%;
     float: right;
-    width: 90%;
+    width: 100%;
 }
 section{
     text-align: justify;
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding: 10px;
 }
 article{
     background-color: rgb(174, 200, 235);
-    grid-column: 1/4;
+    padding: 0%;
 }
 
 aside{
-    background-color: rgb(65, 65, 65);
-    grid-column: 4/5;
-    padding: 20px;
+    background-color: rgb(66, 84, 161);
+    padding:0%;
 }
 footer {
     background-color: rgb(84, 85, 156);
