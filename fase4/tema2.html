@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+    <link rel="stylesheet" href="../fase3/estilostemas.css">  
+</head>
+
+<body>
+
+	<nav>
+        <title>Menu Desplegable</title>
+		<style type="text/css">
+			
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:560px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:rgb(60, 61, 158);
+				color:#fff;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#434343;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:130px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-130px;
+				top:0px;
+			}
+			
+		</style>
+
+	</head>
+	<body>
+		<div id="header">
+			<ul class="nav">
+				<li><a href="../index.html">Inicio</a></li>
+				<li><a href="">Temas</a>
+					<ul>
+						<li><a href="../fase3/tema1.html">Etiquetas Semánticas</a></li>
+						<li><a href="../fase3/tema2.html">CCS Grid</a></li>
+						</li>
+					</ul>
+				</li>
+				<li><a href="">Recursos digitales</a>
+					<ul>
+						<li><a href="../fase3/recurso1.html">Recurso 1</a></li>
+						<li><a href="../fase3/recurso2.html">Recurso 2</a></li>
+					</ul>
+				</li>
+                <li><a href="">Aprendizaje</a>
+					<ul>
+						<li><a href="../Fase2/design.html">Fase 2</a></li>
+						<li><a href="../fase3/design.html">Fase 3</a></li>
+					</ul>
+				</li>
+				<li><a href="../fase3/informacion.html">Acerca de</a></li>
+                <li><a href="../fase3/autor.html">Autor</a></li>
+			</ul>
+		</div>
+</nav>
+
+<header>
+    
+    <center>
+		<h3 id="CCS">CCS GRID</h3>
+		</center>
+		<br>
+		<P>
+		CSS Grid es un sistema de maquetación web que divide la página en una cuadrícula o rejilla (grid) a partir de la cual se pueden posicionar los diferentes elementos de manera más sencilla, versátil y coherente.
+		</P>
+		<br>
+		<P>
+		<STRong> Su practicidad y sus múltiples ventajas lo han convertido en un estándar.</STRong> Es decir, casi cualquier navegador soporta e interpreta este tipo de código.
+		</P>
+		<br>
+		<P>
+		La irrupción de CSS Grid, junto con Flexbox, supuso una revolución en el mundo de la programación web, ya que permitía realizar con mucho menos código elementos y estructuras que resultaban muy complejas o directamente imposibles.
+		</P>
+		<br>
+		<P>
+		<h4> Ventajas de CSS Grid:</h4>
+		</P>
+		<br>
+		
+			<li>
+				<strong> Mucha más flexibilidad:</strong> te permite controlar los elementos en las 2 dimensiones y con total libertad.
+			</li>
+			<br>
+			<li>
+				<strong> Menos código y menos bugs:</strong> se reduce considerablemente el código empleado, lo que conlleva revisiones más sencillas y menor probabilidad de bugs.
+			</li>
+			<br>
+			<li>
+				<strong>Optimización de recursos: </strong>al ser código más simple y consistente se economiza tanto en tiempo como en recursos necesarios para mostrar la página.
+			</li>
+			<br>
+			<li>
+			   <strong> Responsive más sencillo:</strong> permite crear elementos dinámicos que se adaptan a diferentes tamaños o resoluciones sin complicaciones.
+			</li>
+			<br>
+		
+		<p>
+		<h4> Primeros pasos </h4>
+		<br>
+		</p>
+		<p>Te resumimos el funcionamiento de CSS Grid en 4 sencillos pasos.
+		</p>
+		<br>
+		<p>
+		<h4>1. Crea un bloque contenedor</h4>
+		</p>
+		<br>
+		<p>
+			Para alojar los elementos que quieras colocar es necesario crear un bloque contenedor, como por ejemplo:
+		</p>
+		<br>
+		<center>
+		<img src="../Fase2/imagenes/crear bloque contenedor.png" alt="Crear bloque contenedor" width="700" height="340" title="Crear bloque contenedor">
+		</center>
+		<br>
+		<h4>2. Activa CSS Grid</h4>
+		
+		<br>
+		<p>
+			Para que Grid comience a funcionar debes activarlo mediante la propiedad display: grid.
+		</p>
+		<br>
+		<center>
+		<img src="../Fase2/imagenes/Activa CSS Grid.png" alt="">
+		</center>
+		<br>
+		<p>
+		<h4>3. Define tu rejilla</h4>
+		</p>
+		<br>
+		<p>
+			Una vez esté activo, toca definir la rejilla mediante las siguientes propiedades: grid-template-rows, grid-template-columns y/o grid-template-areas.
+		</p>
+		<br>
+		<p>
+			Por ejemplo, si queremos hacer este esquema:
+		</p>
+		<br>
+		<center>
+		<img src="../Fase2/imagenes/Define tu rejilla.png" alt="">
+		</center>
+		<br>
+		<p>
+			Utilizaremos el siguiente código:
+		</p>
+		<br>
+		<center>
+		<img src="../Fase2/imagenes/utilizaremos el siguiente codigo.png" alt="">
+		</center>
+		<br>
+		<p>
+		Puedes definir tus elementos utilizando diferentes unidades fijas como los píxeles, o utilizar la unidad propia del sistema Grid: los fr.
+		</p>
+		<br>
+		<center>
+		<img src="../Fase2/imagenes/Definir elementos.png" alt="">
+		</center>
+		<br>
+		<p>
+			Por ejemplo, si tienes 3 columnas y le asignas un valor 1fr a cada una, esto repartirá el espacio a partes iguales entre las 3. Si en cambio, le das el valor 2fr a una de ellas, esa ocupará el doble de espacio que las otras.
+		</p>
+		<br>
+		<p>
+			El espaciado entre items puedes marcarlo con grid-row-gap y grid-column-gap, o bien definirlo previamente en tu grid como si fueran una columna/fila más.
+		</p>
+		<br>
+		<p>
+		<h4>4. Colocar los elementos en la rejilla</h4>
+		</p>
+		<br>
+		<center>
+		<img src="../Fase2/imagenes/Colocar elementos en la rejilla.png" alt="">
+		</center>
+		<br>
+		<p>
+			Si quieres personalizar la ubicación de los ítems puedes indicarle donde quieres que vaya cada uno tal que así:
+		</p>
+		<br>
+		<center>
+		<img src="../Fase2/imagenes/Personalizar item.png" alt="">
+		</center>
+		<br>
+		<p>
+			O de forma acortada:
+		</p>
+		<br>
+		<center>
+		<img src="../Fase2/imagenes/Forma acortada.png" alt="">
+		</center>
+		<br>
+		<center>
+		<img src="../Fase2/imagenes/Forma acortada2.png" alt="">
+		</center>
+		<br>
+		<p>
+			Otro modo acortado sería utilizando grid-row: X / Y o grid-column: X / Y. Siendo X el número de fila o columna inicial e Y el número de fila o columna final.
+		</p>
+		<br>
+		<center>
+		<img src="../Fase2/imagenes/Otro modo de acortar.png" alt="">
+		</center>
+		<br>
+		<center>
+		<img src="../Fase2/imagenes/Otro modo de acortar2.png" alt="">
+		</center>
+		<br>
+		<p>
+			De esta forma puedes repartir los elementos a tu gusto, incluso variando el espacio que ocupa cada uno para hacerlo más dinámico.
+		</p>
+		<br>
+		<p>
+			Esto es solo un avance de lo que puedes realizar con este sistema. Si quieres saber más, puedes pasarte por aquí y echarle un ojo a la guía.
+		</p>
+		<br>
+		<p>
+			<strong> Con CSS Grid ahorrarás tiempo picando código y tus diseños web serán más flexibles y funcionales.</strong> Si todavía no tienes hosting para montar tu página, pásate por nuestra web y obtén la mejor base para crear tus diseños. ¡A qué esperas para montar tu rejilla!
+		</p>
+		<br>
+			</article>
+		</section>
+		
+		<br>
+		<br>
+		<section>
+		<h4>
+			Referencias bibliográficas
+		</h4>
+		<br>
+		
+		<p>
+			Diez, T., Domínguez, M. J., Martínez, J. J., & Sáenz, J. (2012). Creación de páginas Web accesibles con HTML5. Consultado el, 26.
+		</p>
+		<br>
+		<p>
+			https://www.aulaclic.es/articulos/html5-semantica_1.html#:~:text=Las%20etiquetas%20sem%C3%A1nticas%20ayudan%20a,lo%20que%20trata%20su%20contenido.
+		</p>
+		<br>
+		<p>
+			https://dinahosting.com/blog/css-grid-ventajas-y-primeros-pasos/
+		</p>
+		<br>
+		<p>
+			Celaya Luna, A. (2014). Creación de páginas web: HTML5. p. 1 - 60. https://elibro-net.bibliotecavirtual.unad.edu.co/es/ereader/unad/56045
+		</p>
+		<br>
+		<p>
+			Granollers i Saltiveri, T. G. (2012). Diseño de sistemas interactivos centrados en el usuario. Editorial UOC. p. 211 - 264. https://elibro-net.bibliotecavirtual.unad.edu.co/es/ereader/unad/56326?page=94
+		</p>
+		<br>
+		<p>
+			Ochoa Torres, J. (2018). O.V.I. SCV – Sistema Controlador de Versiones. [Video]. http://hdl.handle.net/10596/22592
+		</p>
+		
+		</section>
+		<br>
+		<br>
+		<footer>
+		
+			<p>skype tutor: josue8atorres</p>
+			<p>E-mail tutor: josue.ochoa@unad.edu.co</p>
+		</footer>
+		</body>
+		</html>

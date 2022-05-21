@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+    <link rel="stylesheet" href="../fase3/estilostemas.css">  
+</head>
+
+<body>
+
+	<nav>
+        <title>Menu Desplegable</title>
+		<style type="text/css">
+			
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:560px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:rgb(60, 61, 158);
+				color:#fff;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#434343;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:130px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				right:-130px;
+				top:0px;
+			}
+			
+		</style>
+
+	</head>
+	<body>
+		<div id="header">
+			<ul class="nav">
+				<li><a href="../index.html">Inicio</a></li>
+				<li><a href="">Temas</a>
+					<ul>
+						<li><a href="../fase3/tema1.html">Etiquetas Semánticas</a></li>
+						<li><a href="../fase3/tema2.html">CCS Grid</a></li>
+						</li>
+					</ul>
+				</li>
+				<li><a href="">Recursos digitales</a>
+					<ul>
+						<li><a href="../fase3/recurso1.html">Recurso 1</a></li>
+						<li><a href="../fase3/recurso2.html">Recurso 2</a></li>
+					</ul>
+				</li>
+                <li><a href="">Aprendizaje</a>
+					<ul>
+						<li><a href="../Fase2/design.html">Fase 2</a></li>
+						<li><a href="../fase3/design.html">Fase 3</a></li>
+					</ul>
+				</li>
+				<li><a href="../fase3/informacion.html">Acerca de</a></li>
+                <li><a href="../fase3/autor.html">Autor</a></li>
+			</ul>
+		</div>
+</nav>
+
+<header>
+    
+    <Header class="entry-header">
+        <h1><center> _______________________________________________________________ </center></h1>
+        <br>
+        <h1 class="entry-header"> <center>Etiquetas Semánticas</center> </h1>
+        <h1><center> _______________________________________________________________ </center></h1>
+    </Header>
+
+   <aside>
+    <h3>
+    </h3>
+</aside>
+            
+    <br>
+   
+<section>
+    <article>
+
+    <br>
+    <p>
+        En este artículo vamos a ver las etiquetas semánticas de HTML5, como: <strong> HEADER, ARTICLE, SECTION, ASIDE, FOOTER, NAV, FIGURE, TIME </strong>
+    <p>
+        Según Diez, T., Domínguez, M. J., Martínez, J. J., & Sáenz, J. (2012). Lo primero que conviene remarcar es que HTML5 no es un lenguaje nuevo en contraposición a HTML, sino una nueva versión del mismo lenguaje. También hay que recordar que HTML5 incorpora cambios en profundidad que los navegadores antiguos no son capaces de mostrar, por lo tanto que hay que tener actualizado el navegador.
+    </p>
+    <br>
+    <p>
+        Las etiquetas semánticas ayudan a definir la estructura del documento y permiten que las páginas web sean mejor indexadas por los buscadores.
+    </p>
+        
+    <p>
+        Una etiqueta se califica como semántica si tiene que ver el significado, es decir, si nos informa sobre lo que trata su contenido. Por ejemplo, la etiqueta SECTION nos dice que contiene una sección o capítulo dentro de la página. Frente a las etiquetas semánticas tenemos otros tipos de etiquetas como las que afectan al formato, como UL, a multimedia, como VIDEO, etc.
+    </p> 
+    <p> El esquema de una página con etiquetas semánticas podría ser el siguiente. 
+    <br>
+    <br>
+    <center>
+        <img src="../Fase2/imagenes/estructura-html5.jpg" alt="Ayuda" width="700" height="340" title="Imagen ejemplo">
+    </center>
+
+    </p> 
+    <br>
+
+    <p> Antes de la existencia de las etiquetas semánticas, el contenido se estructuraba con etiquetas DIV que no aportaban ninguna información sobre el tema que trataban, salvo que se añadiese aprovechando el valor dado a la propiedad ID, o a la propiedad CLASS para hacer referencia a su contenido.
+    </p>
+    <br>
+    <p> Las etiquetas a las que vamos a prestar más atención en este artículo son las que definen la estructura general del sitio ( HEADER, ARTICLE, SECTION, ASIDE, FOOTER, NAV ) aunque también existen otra nuevas etiquetas semánticas que señalan elementos concretos de la página como la etiqueta FIGURE, para imágenes y gráficos, la etiqueta FIGCAPTION, que es un pie de imagen, la etiqueta TIME para definir fechas y horas, también MAIN, MARK, SUMARY Y DETAILS.
+    <br>
+    <br>
+    </p>
+    <p>Por ejemplo, el código siguiente produce el resultado que se ve a continuación utilizando las etiquetas FIGURE y FIGCAPTION.
+    <br>
+    <br>
+    <br>
+    <center>
+        <figure>
+            <img src="../Fase2/imagenes/fallas.jpg" alt="The Pulpit Rock" width="499" height="340">
+            <figcaption>Fig.1 - Falla de la plaza del Ayuntamiento de Valencia.</figcaption>
+        </figure>
+    </center>
+    </p>
+<br>
+<center>
+
+    <h3>Referencias bibliográficas</h3>
+</h4>
+<br>
+
+<p>
+    Diez, T., Domínguez, M. J., Martínez, J. J., & Sáenz, J. (2012). Creación de páginas Web accesibles con HTML5. Consultado el, 26.
+</p>
+<br>
+<p>
+    https://www.aulaclic.es/articulos/html5-semantica_1.html#:~:text=Las%20etiquetas%20sem%C3%A1nticas%20ayudan%20a,lo%20que%20trata%20su%20contenido.
+</p>
+<br>
+<p>
+    https://dinahosting.com/blog/css-grid-ventajas-y-primeros-pasos/
+</p>
+<br>
+<p>
+    Celaya Luna, A. (2014). Creación de páginas web: HTML5. p. 1 - 60. https://elibro-net.bibliotecavirtual.unad.edu.co/es/ereader/unad/56045
+</p>
+<br>
+<p>
+    Granollers i Saltiveri, T. G. (2012). Diseño de sistemas interactivos centrados en el usuario. Editorial UOC. p. 211 - 264. https://elibro-net.bibliotecavirtual.unad.edu.co/es/ereader/unad/56326?page=94
+</p>
+<br>
+<p>
+    Ochoa Torres, J. (2018). O.V.I. SCV – Sistema Controlador de Versiones. [Video]. http://hdl.handle.net/10596/22592
+</p>
+
+</section>
+
+<footer>
+
+    <p>skype tutor: josue8atorres</p>
+    <p>E-mail tutor: josue.ochoa@unad.edu.co</p>
+</footer>
+</body>
+</html>
