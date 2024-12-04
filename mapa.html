@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Comuni Care</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <style>
+        /* Estilo para el contenedor del mapa */
+        #map {
+            height: 400px; /* Altura del mapa */
+        }
+
+        .search-container {
+            margin-bottom: 20px;
+        }
+
+        #resourceTable {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #resourceTable th, #resourceTable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #resourceTable th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        .locate-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .locate-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">COMUNI CARE<sup></sup></div>
+            </a>
+
+            <hr class="sidebar-divider my-0">
+
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>INICIO</span></a>
+            </li>
+
+            <hr class="sidebar-divider">
+
+            <div class="sidebar-heading">
+                MENU
+            </div>
+
+             <!-- Nav Item - Pages Collapse Menu -->
+             <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Registrar</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="ayudas.html">Solicitar ayuda</a>
+                        <a class="collapse-item" href="donaciones.html">Registrar donaciones</a>
+                        <a class="collapse-item" href="r_voluntarios.html">Registrar voluntarios</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="mapa.html">
+                    <i class="fas fa-fw fa-map"></i>
+                    <span>Mapa de recursos</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="list_voluntarios.html">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Voluntarios</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="list_donaciones.html">
+                    <i class="fas fa-fw fa-shopping-basket"></i>
+                    <span>Donaciones</span></a>
+            </li>
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <h1 class="h3 mb-2 text-gray-800">Mapa de Recursos</h1>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg inline text-gray-600 small ">Carlos Peña</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Perfil
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Configuración
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Cerrar sesión
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="container-fluid">
+                    <div class="search-container">
+                        <h3>Filtros</h3>
+                        <select id="resourceType" class="form-control">
+                            <option value="">Todos los recursos</option>
+                            <option value="food">Alimentos</option>
+                            <option value="clothing">Ropa</option>
+                            <option value="medicine">Medicinas</option>
+                        </select>
+                    </div>
+
+                    <div id="map"></div>
+
+                    <table id="resourceTable">
+                        <thead>
+                            <tr>
+                                <th>Dirección</th>
+                                <th>Organismo</th>
+                                <th>Tipo de Recurso</th>
+                                <th>Ubicar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resourceTableBody">
+                            <!-- Aquí se agregarán los recursos -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; Vengadores.tech</span><br>
+                <span>Teléfono: 3183140786</span><br>
+                <span>E-mail: comuni-care@ayudas.org</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+    <script>
+        var map = L.map('map').setView([4.5709, -74.2973], 5); // Centra el mapa en Colombia
+    
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+    
+        // Simulación de datos con ubicaciones en Colombia
+        var resources = {
+            food: [
+                { address: " Calle 1 # 1-1, Bogotá", organization: "Banco de Alimentos de Bogotá", type: "Alimento", lat: 4.6109, lng: -74.0818 },
+                { address: "Carrera 2 # 2-2, Medellín", organization: "Comedor Comunitario Medellín", type: "Alimento", lat: 6.2442, lng: -75.5812 },
+                { address: "Calle 3 # 3-3, Barranquilla", organization: "Fundación Alimentos para Todos", type: "Alimento", lat: 10.9639, lng: -74.7966 },
+                { address: "Calle 4 # 4-4, Cali", organization: "Comedores Comunitarios de Cali", type: "Alimento", lat: 3.4516, lng: -76.5320 },
+                { address: "Calle 5 # 5-5, Cartagena", organization: "Ayuda Alimentaria Cartagena", type: "Alimento", lat: 10.3910, lng: -75.4792 }
+            ],
+            clothing: [
+                { address: "Calle 6 # 6-6, Bucaramanga", organization: "Ropero Solidario Bucaramanga", type: "Ropa", lat: 7.1254, lng: -73.1198 },
+                { address: "Calle 7 # 7-7, Pereira", organization: "Fundación Ropa para Todos", type: "Ropa", lat: 4.8143, lng: -75.6940 },
+                { address: "Calle 8 # 8-8, Manizales", organization: "Ropa Solidaria Manizales", type: "Ropa", lat: 5.0689, lng: -75.5122 },
+                { address: "Calle 9 # 9-9, Pasto", organization: "Comunidad Pastusa", type: "Ropa", lat: 1.2132, lng: -77.2719 },
+                { address: "Calle 10 # 10-10, Santa Marta", organization: "Ropa para el Pueblo", type: "Ropa", lat: 11.2408, lng: -74.1990 }
+            ],
+            medicine: [
+                { address: "Calle 11 # 11-11, Bogotá", organization: "Centro de Salud Bogotá", type: "Medicina", lat: 4.6109, lng: -74.0818 },
+                { address: "Calle 12 # 12-12, Medellín", organization: "Clínica Medellín", type: "Medicina", lat: 6.2442, lng: -75.5812 },
+                { address: "Calle 13 # 13-13, Cali", organization: "Hospital de Cali", type: "Medicina", lat: 3.4516, lng: -76.5320 },
+                { address: "Calle 14 # 14-14, Barranquilla", organization: "Clínica Barranquilla", type: "Medicina", lat: 10.9639, lng: -74.7966 },
+                { address: "Calle 15 # 15-15, Cartagena", organization: "Hospital de Cartagena", type: "Medicina", lat: 10.3910, lng: -75.4792 }
+            ],
+        };
+    
+        // Función para agregar marcadores al mapa
+        function addMarkers(resourcesArray) {
+            resourcesArray.forEach(function (resource) {
+                L.marker([resource.lat, resource.lng]).addTo(map)
+                    .bindPopup(`${resource.organization}: ${resource.address}`);
+            });
+        }
+    
+        document.getElementById('resourceType').addEventListener('change', function () {
+            var selectedType = this.value;
+            var tableBody = document.getElementById('resourceTableBody');
+            tableBody.innerHTML = ''; // Limpiar tabla
+    
+            // Limpiar marcadores anteriores
+            map.eachLayer(function (layer) {
+                if (layer instanceof L.Marker) {
+                    map.removeLayer(layer);
+                }
+            });
+    
+            if (selectedType && resources[selectedType]) {
+                resources[selectedType].forEach(function (resource) {
+                    var row = document.createElement('tr');
+                    row.innerHTML = `<td>${resource.address}</td><td>${resource.organization}</td><td>${resource.type}</td><td><button class="locate-button" onclick="locateResource(${resource.lat}, ${resource.lng})">Ubicar</button></td>`;
+                    tableBody.appendChild(row);
+                });
+                // Agregar marcadores al mapa
+                addMarkers(resources[selectedType]);
+            } else {
+                // Mostrar todos los recursos
+                Object.values(resources).flat().forEach(function (resource) {
+                    var row = document.createElement('tr');
+                    row.innerHTML = `<td>${resource.address}</td><td>${resource.organization}</td><td>${resource.type}</td><td><button class="locate-button" onclick="locateResource(${resource.lat}, ${resource.lng})">Ubicar</button></td>`;
+                    tableBody.appendChild(row);
+                });
+                // Agregar marcadores al mapa
+                addMarkers(Object.values(resources).flat());
+            }
+        });
+    
+        function locateResource(lat, lng) {
+            map.setView([lat, lng], 15); // Centrar el mapa en la ubicación del recurso
+            L.marker([lat, lng]).addTo(map).bindPopup('Ubicación del recurso').openPopup(); // Añadir un marcador
+        }
+    </script>
+</body>
+
+</html>

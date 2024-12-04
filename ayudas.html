@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Comuni Care</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY"></script>
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Solicitar ayuda</h1>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <select class="form-control form-control-user" id="tipo-ayuda" required>
+                                            <option value="" disabled selected>Tipo de ayuda</option>
+                                            <option value="alimentos">Alimentos</option>
+                                            <option value=" medicinas">Medicinas</option>
+                                            <option value="alojamiento">Alojamiento</option>
+                                            <option value="ropa">Ropa</option>
+                                            <option value="otro">Otro</option>
+                                        </select>
+                                    </div>
+                                    <form class="user" action="" method="post">
+                                        <div class="form-group row">
+                                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                                <input type="text" class="form-control form-control-user" id="nombres" placeholder="Nombres" required>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <input type="text" class="form-control form-control-user" id="apellidos" placeholder="Apellidos" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control form-control-user" id="correo" placeholder="Correo electrónico" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="tel" class="form-control form-control-user" id="telefono" placeholder="Teléfono" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <textarea class="form-control form-control-user" id="descripcion" rows="4" placeholder="Descripción" required></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="ubicacion">Selecciona tu ubicación:</label>
+                                            <div id="mapa" style="width: 100%; height: 400px;"></div>
+                                            <input type="hidden" id="ubicacion" name="ubicacion">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">Registrar Ayuda</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Script para Google Maps -->
+    <script>
+        // Inicialización del mapa
+        function initMap() {
+            const mapa = new google.maps.Map(document.getElementById('mapa'), {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8
+            });
+
+            const marcador = new google.maps.Marker({
+                position: { lat: -34.397, lng: 150.644 },
+                map: mapa,
+                draggable: true
+            });
+
+            // Actualizar ubicación en el formulario cuando el marcador se mueve
+            google.maps.event.addListener(marcador, 'dragend', function(event) {
+                document.getElementById('ubicacion').value = event.latLng.lat() + ',' + event.latLng.lng();
+            });
+        }
+
+        // Cargar el mapa cuando la página esté lista
+        document.addEventListener('DOMContentLoaded', initMap);
+    </script>
+
+</body>
+
+</html>

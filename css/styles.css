@@ -1,0 +1,90 @@
+/* Paleta de colores */
+:root {
+    --color-primario: #2c3e50;
+    --color-secundario: #3498db;
+    --color-acento: #2ecc71;
+    --color-texto: #333;
+    --color-fondo: #f4f4f4;
+    --color-blanco: #ffffff;
+    --color-gris-claro: #ecf0f1;
+    --sombra-suave: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos generales */
+body.bg-gradient-primary {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Estilos de la tarjeta */
+.card {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Estilos del formulario */
+.form-control-user {
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+    margin-bottom: 15px;
+}
+
+.form-control-user:focus {
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 5px var(--color-secundario);
+}
+
+textarea.form-control-user {
+    resize: none;
+}
+
+.btn-user {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+    color: var(--color-blanco);
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-user:hover {
+    background-color: var(--color-secundario);
+    transform: translateY(-2px);
+}
+
+/* Estilos específicos */
+.text-center {
+    text-align: center;
+}
+
+.text-gray-900 {
+    color: #3a3b45 !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.shadow-lg {
+    box-shadow: var(--sombra-suave) !important;
+}
+
+.o-hidden {
+    overflow: hidden !important;
+}
+
+/* Estilos del mapa */
+#mapa {
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
